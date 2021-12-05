@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<v-app>
+  <new-post />
+  <post-lay />
+</v-app>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import NewPost from '../components/NewPost.vue'
+import PostLay from '../components/PostLay.vue'
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  export default {
+    name: 'Home',
+    components: {
+      NewPost,PostLay
+    },
+  }
+</script>
+
+<style scoped>
+@media only screen and (max-width: 900px){
+  #app *{
+    top: 25px;
   }
 }
-</script>
+</style>
+
